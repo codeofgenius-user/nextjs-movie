@@ -30,6 +30,9 @@ export function YoutubePlayerRelatedVideo({
       <div className="text-3xl col-span-3 lg:text-base">
         {title.length > 50 ? title.substring(0, 50) + "..." : title}
       </div>
+      <div className="col-span-1">
+          <Add {...{title, videoId}} />
+      </div>
     </div>
   );
 }
