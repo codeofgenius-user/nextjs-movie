@@ -9,10 +9,14 @@ export async function Playlist() {
   } = await getAuth();
 
   // ユーザIDでプレリストを取得
+  const list = await getPlaylistForPlay(userId);
 
   return (
     <div className="max-w-screen-xl mx-auto p-5">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {list.map((item: Playlist) => (
+          <PlaylistItem key={item.id} item={item} />
+        ))}
       </div>
     </div>
   );

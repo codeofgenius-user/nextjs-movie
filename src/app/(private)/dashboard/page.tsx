@@ -29,6 +29,7 @@ export default async function Page() {
         <Breadcrumb {...{ bcList }} />
       </div>
       <div className="my-4 px-6">
+        <Playlist />
       </div>
     </div>
   );
